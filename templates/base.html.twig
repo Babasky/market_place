@@ -2,16 +2,60 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <title> Market place | {% block title %}{% endblock %}</title>
+        <meta name="keywords" content="HTML5 Template">
+        <meta name="description" content="Molla - Bootstrap eCommerce Template">
+        <meta name="author" content="p-themes">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{asset('template/assets/images/icons/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('template/assets/images/icons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{asset('template/assets/images/icons/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{asset('template/assets/images/icons/site.html') }}">
+        <link rel="mask-icon" href="{{asset('template/assets/images/icons/safari-pinned-tab.svg') }}" color="#666666">
+        <link rel="shortcut icon" href="{{asset('template/assets/images/icons/favicon.ico') }}">
+        <meta name="apple-mobile-web-app-title" content="Molla">
+        <meta name="application-name" content="Molla">
+        <meta name="msapplication-TileColor" content="#cc9966">
+        <meta name="msapplication-config" content="{{asset('template/assets/images/icons/browserconfig.xml') }}">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="{{asset('template/assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css') }}">
+        <!-- Plugins CSS File -->
+        <link rel="stylesheet" href="{{asset('template/assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{asset('template/assets/css/plugins/owl-carousel/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{asset('template/assets/css/plugins/magnific-popup/magnific-popup.css') }}">
+        <!-- Main CSS File -->
+        <link rel="stylesheet" href="{{asset('template/assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{asset('template/assets/css/plugins/nouislider/nouislider.css') }}">
+        <link rel="stylesheet" href="{{asset('template/assets/css/demos/demo-11.css') }}">
         {% block stylesheets %}
         {% endblock %}
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="page-wrapper">
+            {% include "_partials/header.html.twig" %}
+            {% block body %}{% endblock %}
+            {% include "_partials/footer.html.twig" %}
+        </div>
+        {% include "_partials/back_to_top.html.twig" %}
+        <script src="{{asset('template/assets/js/jquery.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/jquery.hoverIntent.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/jquery.waypoints.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/superfish.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/isotope.pkgd.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/wNumb.js') }}"></script>
+        <script src="{{asset('template/assets/js/nouislider.min.js') }}"></script>
+        <script src="{{asset('template/assets/js/bootstrap-input-spinner.js') }}"></script>
+        <script src="{{asset('template/assets/js/jquery.magnific-popup.min.js') }}"></script>
+
+        <!-- Main JS File -->
+        <script src="{{asset('template/assets/js/main.js') }}"></script>
+        <script src="{{asset('template/assets/js/demos/demo-11.js') }}"></script>
+        {% block javascripts %}
+        {% endblock %}
     </body>
 </html>
